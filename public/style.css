@@ -145,7 +145,7 @@ label {
 }
 
 .input-textarea {
-  min-height: 120px;
+  min-height: 100px;
   width: 60%; /* Adjust the width as per your preference */
   padding: 0.625rem;
   resize: vertical;
