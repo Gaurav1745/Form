@@ -22,26 +22,27 @@
 
     <form id="survey-form" method="POST" action="/">
       <div class="form-group">
-        <label for="name" id="name-label">First Name</label>
+        <label for="name" id="name">First Name</label>
         <input type="text" name="name" id="name" class="form-control" placeholder="Enter your first name" required />
       </div>
 
       <div class="form-group">
-        <label for="name1" id="name1-label">Middle Name</label>
-        <input type="text" name="name" id="name1" class="form-control" placeholder="Enter your middle name" required />
+        <label for="middle" id="middlename">Middle Name</label>
+        <input type="text" name="middlename" id="middlename" class="form-control" placeholder="Enter your middle name" required />
       </div>
 
       <div class="form-group">
-        <label for="name2" id="name2-label">Last Name</label>
-        <input type="text" name="name" id="name2" class="form-control" placeholder="Enter your last name" required />
+        <label for="lastname" id="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter your last name" required />
       </div>
 
       <div class="form-group">
-        <p>Gender</p>
-        <label> <input name="userRecommend" value="Male" type="radio" class="input-radio"
-            checked />Male</label>
-        <label> <input name="userRecommend" value="Femlae" type="radio" class="input-radio" />Female</label>
-        <label> <input name="userRecommend" value="oTHER" type="radio" class="input-radio" />Other</label>
+        <p>Gender:</p>
+        <select id="Gender">
+          <option value="option1">Male</option>
+          <option value="option2">Female</option>
+          <option value="option3">Other</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -50,28 +51,28 @@
       </div>
 
       <div class="form-group">
-        <label for="name4" id="country">Country</label>
-        <input type="text" name="name" id="name4" class="form-control" placeholder="Enter your county" required />
+        <label for="country" id="country">Country</label>
+        <input type="text" name="country" id="country" class="form-control" placeholder="Enter your county" required />
       </div>
 
       <div class="form-group">
-        <label for="name5" id="state">State</label>
-        <input type="text" name="name" id="name5" class="form-control" placeholder="Enter your state" required />
+        <label for="state" id="state">State</label>
+        <input type="text" name="state" id="state" class="form-control" placeholder="Enter your state" required />
       </div>
 
       <div class="form-group">
-        <label for="name6" id="town">Town</label>
-        <input type="text" name="name" id="name6" class="form-control" placeholder="Enter your City" required />
+        <label for="town" id="town">Town</label>
+        <input type="text" name="town" id="town" class="form-control" placeholder="Enter your City" required />
       </div>
 
       <div class="form-group">
-        <label id="email-label" for="email">Email</label>
+        <label id="email" for="email">Email</label>
         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
       </div>
 
       <div class="form-group">
-        <label id="number-label2" for="number"> Postcode <span class="clue"> </span></label>
-        <input type="number" name="age" id="number2" class="form-control" placeholder="enter your postcode" />
+        <label id="postcode" for="postcode"> Postcode <span class="clue"> </span></label>
+        <input type="number" name="postcide" id="postcode" class="form-control" placeholder="enter your postcode" />
       </div>
 
 
@@ -83,63 +84,138 @@
 
       <div class="form-group">
         <p>Drinking</p>
-        <label> <input name="userRecommend" value="yes" type="radio" class="input-radio"
-            checked />Yes</label>
-        <label> <input name="userRecommend" value="no" type="radio" class="input-radio" />no</label>
+        <select id="drinking">
+          <option value="water">Water</option>
+          <option value="coffee">Coffee</option>
+          <option value="tea">Tea</option>
+          <option value="juice">Juice</option>
+          <option value="soda">Soda</option>
+          <option value="milk">Milk</option>
+          <option value="beer">Beer</option>
+          <option value="wine">Wine</option>
+          <option value="cocktail">Cocktail</option>
+        </select>
       </div>
 
       <div class="form-group">
         <p>Smoking</p>
-        <label> <input name="userRecommend" value="yes1" type="radio" class="input-radio"
-            checked />Yes</label>
-        <label> <input name="userRecommend" value="no1" type="radio" class="input-radio" />no</label>
+        <select id="smoking">
+          <option value="none">None</option>
+          <option value="cigarettes">Cigarettes</option>
+          <option value="cigars">Cigars</option>
+          <option value="pipe">Pipe</option>
+          <option value="vape">Vape/Electronic Cigarettes</option>
+          <option value="hookah">Hookah/Shisha</option>
+        </select>
       </div>
 
       <div class="form-group">
         <p>Drugs</p>
-        <label> <input name="userRecommend" value="yes1" type="radio" class="input-radio"
-            checked />Yes</label>
-        <label> <input name="userRecommend" value="no1" type="radio" class="input-radio" />no</label>
+        <select id="drugs">
+          <option value="none">None</option>
+          <option value="marijuana">Marijuana</option>
+          <option value="cocaine">Cocaine</option>
+          <option value="heroin">Heroin</option>
+          <option value="methamphetamine">Methamphetamine</option>
+          <option value="prescription">Prescription Drugs</option>
+        </select>
       </div>
 
       <div class="form-group">
-        <label for="name7" id="name7">Diseases</label>
-        <input type="text" name="name" id="name7" class="form-control" placeholder="Enter all Diseases" required />
+        <p>Disease:</p>
+        <select id="diseases">
+          <option value="none">None</option>
+          <option value="diabetes">Diabetes</option>
+          <option value="hypertension">Hypertension</option>
+          <option value="asthma">Asthma</option>
+          <option value="cancer">Cancer</option>
+          <option value="heart-disease">Heart Disease</option>
+          <option value="stroke">Stroke</option>
+          <option value="arthritis">Arthritis</option>
+          <option value="osteoporosis">Osteoporosis</option>
+          <option value="alzheimer">Alzheimer's Disease</option>
+          <option value="parkinson">Parkinson's Disease</option>
+          <option value="depression">Depression</option>
+          <option value="anxiety">Anxiety Disorder</option>
+          <option value="asthma">Asthma</option>
+          <option value="bronchitis">Bronchitis</option>
+          <option value="migraine">Migraine</option>
+          <option value="obesity">Obesity</option>
+          <option value="kidney-disease">Kidney Disease</option>
+          <option value="liver-disease">Liver Disease</option>
+          <option value="pneumonia">Pneumonia</option>
+        </select>
+        
       </div>
 
       <div class="form-group">
-        <label for="name8" id="name8">Disorders</label>
-        <input type="text" name="name" id="name8" class="form-control" placeholder="Enter all Disorders" required />
+        <p>Disorders</p>
+        <select id="disorders">
+          <option value="none">None</option>
+          <option value="anxiety">Anxiety Disorder</option>
+          <option value="depression">Depressive Disorder</option>
+          <option value="bipolar">Bipolar Disorder</option>
+          <option value="ocd">Obsessive-Compulsive Disorder (OCD)</option>
+          <option value="ptsd">Post-Traumatic Stress Disorder (PTSD)</option>
+          <option value="adhd">Attention-Deficit/Hyperactivity Disorder (ADHD)</option>
+          <option value="autism">Autism Spectrum Disorder (ASD)</option>
+          <option value="schizophrenia">Schizophrenia</option>
+          <option value="eating">Eating Disorders</option>
+          <option value="sleep">Sleep Disorders</option>
+          <option value="personality">Personality Disorders</option>
+          <option value="substance-abuse">Substance Abuse Disorders</option>
+          <option value="dissociative">Dissociative Disorders</option>
+          <option value="sexual">Sexual Disorders</option>
+          <option value="gender">Gender Dysphoria</option>
+          <option value="somatoform">Somatoform Disorders</option>
+          <option value="conduct">Conduct Disorders</option>
+          <option value="developmental">Developmental Disorders</option>
+          <option value="factitious">Factitious Disorders</option>
+        </select>
+        
       </div>
 
       <div class="form-group">
-        <label for="name9" id="name9">City of birth </label>
-        <input type="text" name="name9" id="name9" class="form-control" placeholder="Enter your City of birth" required />
+        <label for="cityofbirth" id="cityofbirth">City of birth </label>
+        <input type="text" name="cityofbirth" id="cityofbirth" class="form-control" placeholder="Enter your City of birth" required />
       </div>
 
       <div class="form-group">
-        <label id="number-label4" for="number"> Number of siblings<span class="clue"> </span></label>
-        <input type="number" name="age" id="number7" min="0" max="99" class="form-control" placeholder="Number of siblings" />
+        <label id="numbersiblings" for="numbersiblings"> Number of siblings<span class="clue"> </span></label>
+        <input type="number" name="age" id="numbersiblings" min="0" max="99" class="form-control" placeholder="Number of siblings" />
       </div>
       
       <div class="form-group">
-        <label for="name10" id="name10">Name of siblings</label>
-        <input type="text" name="name10" id="name10" class="form-control" placeholder="Enter The name" required />
+        <label for="siblings" id="siblings">Name of siblings</label>
+        <input type="text" name="siblings" id="siblings" class="form-control" placeholder="Enter The name" required />
       </div>
 
       <div class="form-group">
-        <label for="name11" id="town">Fathers Name</label>
-        <input type="text" name="name9" id="name11" class="form-control" placeholder="Enter fathers name" required />
+        <label for="Fathersname" id="Fathersname">Fathers Name</label>
+        <input type="text" name="Fathersname" id="Fathersname" class="form-control" placeholder="Enter fathers name" required />
       </div>
 
       <div class="form-group">
-        <label for="name12" id="town">Mothers Name</label>
-        <input type="text" name="name9" id="name12" class="form-control" placeholder="Enter your Mothers name" required />
+        <label for="Mothersname" id="Mothersname">Mothers Name</label>
+        <input type="text" name="Mothersname" id="Mothersname" class="form-control" placeholder="Enter your Mothers name" required />
+      </div>
+
+
+      <div class="form-group">
+        <p>Upload Photos:</p>
+        <label for="photo-upload">Select Photos:</label>
+        <input type="file" id="photo-upload" name="photo-upload" multiple>
+      </div>
+
+
+      <div class="form-group">
+        <p>Upload Videos:</p>
+        <label for="video-upload">Select videos:</label>
+        <input type="file" id="video-upload" name="video-upload" multiple>
       </div>
 
       <div class="form-group">
-        <p>Any comments or suggestions?
-          <span class="clue">Regarding the webpage</span>
+        <p>Do you want to add something extra?
         </p>
         <textarea id="comments" class="input-textarea form-control" name="comment"
           placeholder="Enter your comment here..."></textarea>
