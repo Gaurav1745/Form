@@ -1,105 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memorial Form</title>
+  <title>LyfIndexForm</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
     <header class="header">
-      <h1 id="title" class="text-center">
-          LyfIndexForm
-      </h1>
+      <h1 id="title" class="text-center">LyfIndexForm</h1>
     </header>
-
-    <p id="description" class="description text-center">
-      Thank you for taking time to help us improve the platform.
-    </p>
-
+    <p id="description" class="description text-center">Thank you for taking time to help us improve the platform.</p>
     <form id="survey-form" method="POST" action="/">
       <div class="form-group">
-        <label for="name" id="name">First Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your first name" required />
-      </div>
+        <label for="name">First Name</label>
 
-      <div class="form-group">
-        <label for="middle" id="middlename">Middle Name</label>
-        <input type="text" name="middlename" id="middlename" class="form-control" placeholder="Enter your middle name" required />
+        <input type="text" name="name" id="name" class="form-control"   required />
       </div>
-
       <div class="form-group">
-        <label for="lastname" id="lastname">Last Name</label>
-        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter your last name" required />
+        <label for="email">Email</label>
+
+        <input type="email" name="email" id="email" class="form-control" required />
       </div>
-
       <div class="form-group">
-        <p>Gender:</p>
-        <select id="Gender">
-          <option value="option1">Male</option>
-          <option value="option2">Female</option>
-          <option value="option3">Other</option>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="genderqueer">Genderqueer</option>
+          <option value="genderfluid">Genderfluid</option>
+          <option value="agender">Agender</option>
+          <option value="bigender">Bigender</option>
+          <option value="two-spirit">Two-spirit</option>
+          <option value="androgynous">Androgynous</option>
+          <option value="transgender">Transgender</option>
+          <option value="gender-nonconforming">Gender nonconforming</option>
+          <option value="demigender">Demigender</option>
+          <option value="neutrois">Neutrois</option>
+          <option value="pangender">Pangender</option>
+          <option value="gender-questioning">Gender questioning</option>
+          <option value="other">Other</option>
         </select>
       </div>
-
+      
       <div class="form-group">
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob">
+        <label for="dob">Date of Birth</label>
+
+        <input type="date" id="dob" name="dob">
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+
+        <input type="text" name="country" id="country" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+
+        <input type="text" name="state" id="state" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+
+        <input type="text" name="city" id="city" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="cityofbirth">City of Birth</label>
+
+        <input type="text" name="cityofbirth" id="cityofbirth" class="form-control"  required />
+      </div>
+      <div class="form-group">
+        <label for="numbersiblings">Number of Siblings</label>
+
+        <input type="number" name="numbersiblings" id="numbersiblings" min="0" max="99" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="siblings">Name of Siblings</label>
+
+        <input type="text" name="siblings" id="siblings" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="Fathersname">Father's Name</label>
+
+        <input type="text" name="Fathersname" id="Fathersname" class="form-control"  required />
+      </div>
+      <div class="form-group">
+        <label for="Mothersname">Mother's Name</label>
+
+        <input type="text" name="Mothersname" id="Mothersname" class="form-control" required />
       </div>
 
+
       <div class="form-group">
-        <label for="country" id="country">Country</label>
-        <input type="text" name="country" id="country" class="form-control" placeholder="Enter your county" required />
+        <label for="drinking">Drinking</label>
+        <select id="drinking" name="drinking" onchange="toggleDrinkType()">
+          <option value="non-alcoholic">Non-Alcoholic</option>
+          <option value="alcoholic">Alcoholic</option>
+        </select>
       </div>
-
-      <div class="form-group">
-        <label for="state" id="state">State</label>
-        <input type="text" name="state" id="state" class="form-control" placeholder="Enter your state" required />
-      </div>
-
-      <div class="form-group">
-        <label for="town" id="town">Town</label>
-        <input type="text" name="town" id="town" class="form-control" placeholder="Enter your City" required />
-      </div>
-
-      <div class="form-group">
-        <label id="email" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
-      </div>
-
-      <div class="form-group">
-        <label id="postcode" for="postcode"> Postcode <span class="clue"> </span></label>
-        <input type="number" name="postcide" id="postcode" class="form-control" placeholder="enter your postcode" />
-      </div>
-
-
-
-      <div class="form-group">
-        <label for="dod">Date of Death:</label>
-        <input type="date" id="dod" name="dod">
-        </div>
-
-      <div class="form-group">
-        <p>Drinking</p>
-        <select id="drinking">
+      
+      <div class="form-group" id="drink-type-non-alcoholic" style="display: none;">
+        <label for="drink-type-non-alcoholic">Non-Alcoholic Drink Type</label>
+        <select id="drink-type-non-alcoholic" name="drink-type-non-alcoholic">
           <option value="water">Water</option>
           <option value="coffee">Coffee</option>
           <option value="tea">Tea</option>
           <option value="juice">Juice</option>
           <option value="soda">Soda</option>
           <option value="milk">Milk</option>
+        </select>
+      </div>
+      
+      <div class="form-group" id="drink-type-alcoholic" style="display: none;">
+        <label for="drink-type-alcoholic">Alcoholic Drink Type</label>
+        <select id="drink-type-alcoholic" name="drink-type-alcoholic">
           <option value="beer">Beer</option>
           <option value="wine">Wine</option>
           <option value="cocktail">Cocktail</option>
         </select>
       </div>
 
+      <script>
+        function toggleDrinkType() {
+          const drinkingSelect = document.getElementById('drinking');
+          const nonAlcoholicSection = document.getElementById('drink-type-non-alcoholic');
+          const alcoholicSection = document.getElementById('drink-type-alcoholic');
+      
+          if (drinkingSelect.value === 'non-alcoholic') {
+            nonAlcoholicSection.style.display = 'block';
+            alcoholicSection.style.display = 'none';
+          } else if (drinkingSelect.value === 'alcoholic') {
+            nonAlcoholicSection.style.display = 'none';
+            alcoholicSection.style.display = 'block';
+          }
+        }
+      </script>
+
+
+
       <div class="form-group">
-        <p>Smoking</p>
-        <select id="smoking">
+        <label for="smoking">Smoking</label>
+        <select id="smoking" name="smoking">
           <option value="none">None</option>
           <option value="cigarettes">Cigarettes</option>
           <option value="cigars">Cigars</option>
@@ -108,10 +150,9 @@
           <option value="hookah">Hookah/Shisha</option>
         </select>
       </div>
-
       <div class="form-group">
-        <p>Drugs</p>
-        <select id="drugs">
+        <label for="drugs">Drugs</label>
+        <select id="drugs" name="drugs">
           <option value="none">None</option>
           <option value="marijuana">Marijuana</option>
           <option value="cocaine">Cocaine</option>
@@ -120,10 +161,9 @@
           <option value="prescription">Prescription Drugs</option>
         </select>
       </div>
-
       <div class="form-group">
-        <p>Disease:</p>
-        <select id="diseases">
+        <label for="diseases">Disease</label>
+        <select id="diseases" name="diseases">
           <option value="none">None</option>
           <option value="diabetes">Diabetes</option>
           <option value="hypertension">Hypertension</option>
@@ -143,14 +183,11 @@
           <option value="obesity">Obesity</option>
           <option value="kidney-disease">Kidney Disease</option>
           <option value="liver-disease">Liver Disease</option>
-          <option value="pneumonia">Pneumonia</option>
         </select>
-        
       </div>
-
       <div class="form-group">
-        <p>Disorders</p>
-        <select id="disorders">
+        <label for="disorders">Disorders</label>
+        <select id="disorders" name="disorders">
           <option value="none">None</option>
           <option value="anxiety">Anxiety Disorder</option>
           <option value="depression">Depressive Disorder</option>
@@ -172,66 +209,29 @@
           <option value="developmental">Developmental Disorders</option>
           <option value="factitious">Factitious Disorders</option>
         </select>
-        
-      </div>
-
-      <div class="form-group">
-        <label for="cityofbirth" id="cityofbirth">City of birth </label>
-        <input type="text" name="cityofbirth" id="cityofbirth" class="form-control" placeholder="Enter your City of birth" required />
-      </div>
-
-      <div class="form-group">
-        <label id="numbersiblings" for="numbersiblings"> Number of siblings<span class="clue"> </span></label>
-        <input type="number" name="age" id="numbersiblings" min="0" max="99" class="form-control" placeholder="Number of siblings" />
       </div>
       
       <div class="form-group">
-        <label for="siblings" id="siblings">Name of siblings</label>
-        <input type="text" name="siblings" id="siblings" class="form-control" placeholder="Enter The name" required />
-      </div>
-
-      <div class="form-group">
-        <label for="Fathersname" id="Fathersname">Fathers Name</label>
-        <input type="text" name="Fathersname" id="Fathersname" class="form-control" placeholder="Enter fathers name" required />
-      </div>
-
-      <div class="form-group">
-        <label for="Mothersname" id="Mothersname">Mothers Name</label>
-        <input type="text" name="Mothersname" id="Mothersname" class="form-control" placeholder="Enter your Mothers name" required />
-      </div>
-
-
-      <div class="form-group">
-        <p>Upload Photos:</p>
-        <label for="photo-upload">Select Photos:</label>
+        <label for="photo-upload">Upload Photos:</label>
         <input type="file" id="photo-upload" name="photo-upload" multiple>
       </div>
-
-
       <div class="form-group">
-        <p>Upload Videos:</p>
-        <label for="video-upload">Select videos:</label>
+        <label for="video-upload">Upload Videos:</label>
+
         <input type="file" id="video-upload" name="video-upload" multiple>
       </div>
-
       <div class="form-group">
-        <p>Do you want to add something extra?
-        </p>
-        <textarea id="comments" class="input-textarea form-control" name="comment"
-          placeholder="Enter your comment here..."></textarea>
+        <label for="comments">Additional Comments</label>
+
+        <textarea id="comments" class="input-textarea form-control" name="comments"></textarea>
       </div>
-
       <div class="form-group">
-        <button type="submit" id="submit" class="submit-button">
-          Submit
-        </button>
+        <button type="submit" id="submit" class="submit-button">Submit</button>
       </div>
     </form>
   </div>
-
   <script>
     document.getElementById('survey-form').reset()
   </script>
 </body>
-
 </html>
