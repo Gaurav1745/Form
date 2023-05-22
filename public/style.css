@@ -51,7 +51,6 @@ label {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
-
 input,
 button,
 select,
@@ -61,6 +60,8 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+
 
 button {
   border: none;
@@ -116,22 +117,25 @@ form {
   }
 }
 
+
 .form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  flex: 0 0 200px;
+  margin-right: 0.625rem;
+  text-align: right;
 }
 
 .form-control {
-  display: block;
-  width: 90%;
+  flex: 1;
   height: 2.375rem;
   padding: 0.375rem 0.75rem;
-  color: #495057;
-  background-color: white;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  max-width: 300px; /* Adjust the width as per your preference */
+  width: 100%;
 }
 
 .form-control:focus {
@@ -139,6 +143,28 @@ form {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+.input-textarea {
+  min-height: 120px;
+  width: 60%; /* Adjust the width as per your preference */
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 60%; /* Adjust the width as per your preference */
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+
 
 .input-radio,
 .input-checkbox {
@@ -148,12 +174,7 @@ form {
   min-width: 1.25rem;
 }
 
-.input-textarea {
-  min-height: 120px;
-  width: 100%;
-  padding: 0.625rem;
-  resize: vertical;
-}
+
 
 .submit-button {
   display: block;
